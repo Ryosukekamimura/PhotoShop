@@ -4,10 +4,148 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PhotoShop"
+        xmlns:HamburgerMenu="clr-namespace:HamburgerMenu;assembly=HamburgerMenu"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="PhotoShop" Height="450" Width="800" Background="#FF535353">
+
     <Grid>
-       
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="124*"/>
+            <ColumnDefinition Width="65*"/>
+            <ColumnDefinition Width="604*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+
+
+
+
+
+
+        <!--メニュー部分-->
+        <Menu Background="#FF535353" Foreground="#FFEAE4E4" FontWeight="Bold" Grid.ColumnSpan="3" Margin="0,0,0.334,112">
+            <MenuItem Header="ファイル">
+                <MenuItem Header="開く" x:Name="open_button" Click="open_button_Click" Foreground="Black"/>
+            </MenuItem>
+            <MenuItem Header="編集">
+
+            </MenuItem>
+            <MenuItem Header="イメージ">
+
+            </MenuItem>
+            <MenuItem Header="書式">
+
+            </MenuItem>
+            <MenuItem Header="選択範囲">
+
+
+            </MenuItem>
+            <MenuItem Header="フィルター">
+
+            </MenuItem>
+            <MenuItem Header="3D">
+
+            </MenuItem>
+            <MenuItem Header="表示">
+
+
+            </MenuItem>
+            <MenuItem Header="ウィンドウ">
+                <MenuItem Header="属性" Click="attribute_Click" Foreground="Black"/>
+
+            </MenuItem>
+            <MenuItem Header="ヘルプ">
+
+            </MenuItem>
+
+        </Menu>
+
+
+
+
+        <!--メイン部分-->
+        <Grid Grid.ColumnSpan="3" Margin="0,19,0.334,-0.333" Grid.RowSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <HamburgerMenu:HamburgerMenu Background="#FF535353" MenuIconColor="Black" SelectionIndicatorColor="Black" MenuItemForeground="Black" HorizontalAlignment="Left" Grid.Column="0" Grid.Row="1">
+                <HamburgerMenu:HamburgerMenuItem Icon="C:\Users\kamimura\myfolder\programming\C#\C# wpf\photoshop\images\icon\移動.png" Text="移動ツール"  SelectionCommand="{Binding ElementName=this_}" Foreground="White"/>
+                <HamburgerMenu:HamburgerMenuItem Icon="C:\Users\kamimura\myfolder\programming\C#\C# wpf\photoshop\images\icon\グレイ.png" Text="グレイ" x:Name="gray_button" MouseDoubleClick="gray_button_MouseDoubleClick" Foreground="White"/>
+                <HamburgerMenu:HamburgerMenuItem Icon="C:\Users\kamimura\myfolder\programming\C#\C# wpf\photoshop\images\icon\なげなわ.png" Text="なげなわツール" Foreground="White"/>
+                <HamburgerMenu:HamburgerMenuItem Icon="C:\Users\kamimura\myfolder\programming\C#\C# wpf\photoshop\images\icon\ぼかし.png" Text="ぼかしツー4ル" x:Name="Gaussian_filter" MouseDoubleClick="Gaussian_filter_MouseDoubleClick" Foreground="White"/>
+                <HamburgerMenu:HamburgerMenuItem Icon="C:\Users\kamimura\myfolder\programming\C#\C# wpf\photoshop\images\icon\横書き文字書き.png" Text="横書き文字書きツール" Foreground="White"/>
+            </HamburgerMenu:HamburgerMenu>
+
+
+            <TabControl Grid.Column="1" x:Name="tabControl" BorderBrush="#FF797979">
+                <TabItem Header="Image01">
+                    <Image Source="Resources\noimage.png" x:Name="imageBox01"/>
+                </TabItem>
+            </TabControl>
+
+
+            <Grid Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <TabControl Grid.Row="0" Grid.Column="0">
+                    <TabItem Header="ヒストリー">
+                        <StackPanel Orientation="Vertical">
+                            <Button Content="imagepath"/>
+                            <Button Content="開く"/>
+                        </StackPanel>
+                    </TabItem>
+                </TabControl>
+
+
+
+                <StackPanel Grid.RowSpan="1" Grid.Column="1" Orientation="Vertical">
+                    <Button Content="属性" x:Name="attribute" Click="attribute_Click" Background="#FF535353" Foreground="#C4FFFFFF" FontWeight="Bold" DragOver="attribute_DragOver" Drop="attribute_Drop"/>
+                    <Button Content="テスト" x:Name="test" Click="test_Click" Background="#FF535353" Foreground="#C4FFFFFF" FontWeight="Bold"/>
+                    <Button Content="テスト1" x:Name="test1" Click="test1_Click" Background="#FF535353" Foreground="#C4FFFFFF" FontWeight="Bold"/>
+                </StackPanel>
+
+
+
+
+            </Grid>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </Grid>
+
+
+
+
+
+
+
+
+
+
 
     </Grid>
 </Window>

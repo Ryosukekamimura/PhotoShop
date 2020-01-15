@@ -1,0 +1,39 @@
+﻿<Window x:Class="PhotoShop.SubAttributeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PhotoShop"
+        mc:Ignorable="d"
+        Title="SubAttributeWindow" Height="300" Width="300" Background="#B2424242">
+    <Grid>
+        <TabControl Background="#FF535353">
+        <TabItem Header="属性" Background="White" FontWeight="Bold" BorderBrush="White" Foreground="#FF623D3D">
+
+            <StackPanel Orientation="Vertical">
+                <Button Content="ドキュメントプロパティ" Foreground="#C4FFFFFF" Background="#FF535353"/>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="W:" Foreground="#CCFFFFFF"/>
+                    <TextBox x:Name="documentProperty_Width"/>
+                    <Label Content="pixcel" Foreground="#CCFFFFFF"/>
+                    <Label Content="H:" Margin="50,0,0,0" Foreground="#CCFFFFFF"/>
+                    <TextBox x:Name="documentProperty_Height"/>
+                        <Label Content="pixcel" Foreground="#CCFFFFFF"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="X:" Foreground="#CCFFFFFF"/>
+                    <TextBox/>
+                    <Label Content="Y:" Margin="50,0,0,0" Foreground="#CCFFFFFF"/>
+                    <TextBox/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="解像度:" Foreground="#CCFFFFFF"/>
+                    <TextBox/>
+                    <Label Content="pixel/Inch" Foreground="#CCFFFFFF"/>
+                </StackPanel>
+            </StackPanel>
+        </TabItem>
+
+    </TabControl>
+    </Grid>
+</Window>
