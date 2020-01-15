@@ -22,10 +22,6 @@ namespace PhotoShop
     {
         public MainWindow() => InitializeComponent();
 
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-            Additional_Pages additional_Pages = new Additional_Pages();
-            additional_Pages.Show();
-        }
+
     }
 }
