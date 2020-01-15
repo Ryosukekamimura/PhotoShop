@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Button x:Name="button" Click="button_Click" Width="200" Height="200" Content="押してください"/>
-        
+        <TextBlock x:Name="textblock" Text="神村亮佑" FontWeight="Bold" Margin="118,110,-118.667,-110.333"/>
 
     </Grid>
 </Window>
